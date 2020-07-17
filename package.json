@@ -1,14 +1,25 @@
 {
   "name": "static-site",
   "version": "1.0.0",
-  "description": "",
+  "description": "HW assignment 09, ES6",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "author": "",
+  "author": "MM",
   "license": "ISC",
   "dependencies": {
     "inquirer": "^6.3.1"
-  }
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/markmckenna37/README-Generator.git"
+  },
+  "keywords": [
+    "README"
+  ],
+  "bugs": {
+    "url": "https://github.com/markmckenna37/README-Generator/issues"
+  },
+  "homepage": "https://github.com/markmckenna37/README-Generator#readme"
 }
