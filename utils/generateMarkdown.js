@@ -1,5 +1,10 @@
 // function to generate markdown for README
 const fs = require("fs") 
+fs.readFile("../index.js", "utf8", (err, data) => {
+  if (err) throw err;
+  generateMarkdown(data);
+})
+
 function generateMarkdown(data) {
   return `
   # ${title}
@@ -62,9 +67,7 @@ function generateMarkdown(data) {
   ${tests}
 `;
 }
-
 module.exports = generateMarkdown;
-generateMarkdown(data);
 
 // fs.readFile("generateMarkdown.js", "utf8", (err, data) => {
 //   if (err) throw err;
