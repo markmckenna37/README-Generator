@@ -1,73 +1,74 @@
-// function to generate markdown for README
-const fs = require("fs") 
-fs.readFile("../index.js", "utf8", (err, data) => {
-  if (err) throw err;
-  generateMarkdown(data);
-})
+//global variables and require functions
+const date = new Date();
+const year = date.getFullYear();
+// function to generate markdown for README, retrieving data from index.js
 
 function generateMarkdown(data) {
-  return `
-  # ${title}
-  ## Description 
-  ${description}
-              
-  --- 
-              
-  ## Table of Contents
-              
-              
-  * [Installation](#installation)
-  * [Usage](#usage)
-  * [Credits](#credits)
-  * [License](#license)
-  * [Contributing](#license)
-              
-  ---
-              
-  ## Installation
-              
-  ${installation}
-              
-              
-  ---
-              
-  ## Usage 
-              
-  ${usage}
-              
-  ---
-              
-  ## Contributing
-              
-  ${contributing}
-              
-  ---
-              
-  ## License
-              
-  ${license}
-              
-  ---
-              
-              
-  ## Badges
-              
-  ![badmath](https://img.shields.io/github/languages/top/nielsenjared/badmath)
-              
-  ---
-              
-  ## Questions/Contribution
-              
-  ${questions}
-              
-  ---
-              
-  ## Tests
-              
-  ${tests}
+  return`
+# ${data.title}
+  
+## Testing
+  
+![GitHub License](https://img.shields.io/badge/license-${data.license}-blue.svg)
+  
+---
+  
+## Description 
+${data.description}
+                      
+--- 
+                      
+## Table of Contents
+                      
+                      
+* [Installation](#installation)
+* [Usage](#usage)
+* [Contributing](#contributing)
+* [License](#license)
+* [Questions](#questions)
+                      
+---
+                      
+## Installation
+                      
+${data.installation}
+                      
+                      
+---
+                      
+## Usage 
+                      
+${data.usage}
+                      
+---
+                      
+## Contributing
+                      
+${data.contributing}
+                      
+---
+                      
+## License
+                      
+This project is licensed under ${data.license}.
+  
+Copyright (c) [${year}] [${data.name}]
+  
+                      
+---
+                                                         
+## Questions
+Have any questions or contributions? Check out my [GitHub Profile](https://github.com/${data.github})                 
+Or you can email me at [${data.email}](${data.email}).
+                      
+---
+                      
+## Tests
+                      
+${data.tests}
 `;
-}
+  }
+
+//exporting README.md data
 module.exports = generateMarkdown;
 
-// fs.readFile("generateMarkdown.js", "utf8", (err, data) => {
-//   if (err) throw err;
