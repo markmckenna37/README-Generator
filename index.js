@@ -46,83 +46,16 @@ const questions = [
             }
         ]).then(({title, description, installation, usage, license, contributing, tests, questions}) => {
             console.log(title, description, installation, usage, license, contributing, tests, questions)
-
-            fs.appendFile("REEDME.md", `
-# ${title}
-## Description 
-${description}
-            
---- 
-            
-## Table of Contents
-            
-            
-* [Installation](#installation)
-* [Usage](#usage)
-* [Credits](#credits)
-* [License](#license)
-* [Contributing](#license)
-            
----
-            
-## Installation
-            
-${installation}
-            
-            
----
-            
-## Usage 
-            
-${usage}
-            
----
-            
-## Contributing
-            
-${contributing}
-            
----
-            
-## License
-            
-${license}
-            
----
-            
-            
-## Badges
-            
-![badmath](https://img.shields.io/github/languages/top/nielsenjared/badmath)
-            
----
-            
-## Questions/Contribution
-            
-${questions}
-            
----
-            
-## Tests
-            
-${tests}
-            
-`, (err) => {
-        
-                if (err) return console.log(err);
-                console.log("Success!");
-        });
-            
-            
-            
-            
+            fs.readFile("generateMarkdown.js", "utf8", (err, data) => {
+                if (err) throw err;
+                const readmeText = JSON.parse(data)
+                writeToFile("REEDME.md", readmeText)
+            })
         })
-        
-        
-        
+]          
+
         
     
-    ];
 
 
 
