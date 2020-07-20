@@ -59,7 +59,7 @@ Copyright (c) [${year}] [${data.name}]
                                                          
 ## Questions
 Have any questions or contributions? Check out my [GitHub Profile](https://github.com/${data.github})                 
-Or you can email me at [${data.email}](${data.email}).
+Or you can email me at <${data.email}>.
                       
 ---
                       
