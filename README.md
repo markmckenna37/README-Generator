@@ -1,6 +1,6 @@
 
 # README-Generator
-  
+![](Assets/Images/screenshot.png)
 ## Testing
   
 ![GitHub License](https://img.shields.io/badge/license-MIT-blue.svg)
@@ -9,6 +9,8 @@
   
 ## Description 
 A program that will write a formatted, styled README.md file. Just enter your project information, and a customized document will be provided for you.
+[GitHub link](https://github.com/markmckenna37/README-Generator)
+[Live GitHub link](https://markmckenna37.github.io/README-Generator/)
                       
 --- 
                       
@@ -32,7 +34,12 @@ Visit the GitHub [Repository](www.markmckenna37.github.io/README-Generator/) and
                       
 ## Usage 
                       
-To use this application, you will need GitBash/Terminal, and Node.js. Once you are inside the README.md Generator directory, enter "npm init" and complete the following prompts. Then, type "node index.js" and complete the following prompts. You will need your GitHub username, email, and project information.
+To use this application, you will need GitBash/Terminal, and Node.js. Change into the README.md Generator directory
+![](Assets/Images/screenshot1.png)
+Once you are inside the README.md Generator directory, enter "npm i"
+![](Assets/Images/screenshot2.png)
+Then, type "node index.js" and complete the following prompts. You will need your GitHub username, email, and project information.
+![](Assets/Images/screenshot3.png)
                       
 ---
                       
